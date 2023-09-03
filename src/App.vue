@@ -1,16 +1,17 @@
 <template>
   <div>
+    <post-form @create="createPost"/>
     <posts-list :posts="posts"/>
   </div>
 </template>
 
 <script>
 import postsList from "@/components/postsList.vue";
-// import PostForm from "@/components/postForm.vue";
+import PostForm from "@/components/postForm.vue";
 export default {
   components: {
     postsList,
-    // PostForm
+    PostForm
   },
   data () {
     return {
@@ -19,6 +20,11 @@ export default {
         {id: 2, name: 'Python', body: 'body is very simple language'},
         {id: 3, name: 'C#', body: 'body is very fast language'},
       ]
+    }
+  },
+  methods: {
+    createPost(post) {
+      this.posts.push(post)
     }
   }
 }
