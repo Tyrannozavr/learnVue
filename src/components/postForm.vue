@@ -5,7 +5,7 @@ export default {
     return {
       post: {
         name: '',
-        description: ''
+        body: ''
       }
     }
   },
@@ -14,12 +14,12 @@ export default {
       const post = {
         id: new Date(),
         name: this.post.name,
-        description: this.post.description
+        body: this.post.body
       }
       this.$emit('create', post)
       this.post = {
         name: '',
-        description: '',
+        body: '',
       }
     }
   }
@@ -29,7 +29,7 @@ export default {
 <template>
   <form class="app" @submit.prevent="createPost">
     <my-input v-model="post.name" placeholder="название" />
-    <my-input v-model="post.description" placeholder="описание" />
+    <my-input v-model="post.body" placeholder="описание" />
 
     <input class="submit" type="submit"  />
   </form>
