@@ -2,6 +2,8 @@
   <div>
     <post-form @create="createPost"/>
     <posts-list :posts="posts"/>
+    test
+    <my-input />
   </div>
 </template>
 
@@ -16,9 +18,9 @@ export default {
   data () {
     return {
       posts: [
-        {id: 1, name: 'JS', body: 'body is universal language'},
-        {id: 2, name: 'Python', body: 'body is very simple language'},
-        {id: 3, name: 'C#', body: 'body is very fast language'},
+        {id: 1, name: 'JS', body: 'is universal language'},
+        {id: 2, name: 'Python', body: 'is very simple language'},
+        {id: 3, name: 'C#', body: 'is very fast language'},
       ]
     }
   },
