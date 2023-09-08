@@ -28,8 +28,9 @@ export default {
 
 <template>
   <form class="app" @submit.prevent="createPost">
-    <input class="input" v-model="post.name" type="text" placeholder="название" />
-    <input class="input" type="text" v-model="post.description" placeholder="описание" />
+    <my-input v-model="post.name" placeholder="название" />
+    <my-input v-model="post.description" placeholder="описание" />
+
     <input class="submit" type="submit"  />
   </form>
 </template>
