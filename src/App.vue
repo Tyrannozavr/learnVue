@@ -2,8 +2,6 @@
   <div>
     <post-form @create="createPost"/>
     <posts-list :posts="posts"/>
-    test
-    <my-input />
   </div>
 </template>
 

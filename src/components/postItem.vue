@@ -6,6 +6,11 @@ export default {
       type: Object,
       required: true
     }
+  },
+  data () {
+    return {
+      inputValue: ''
+    }
   }
 }
 </script>
@@ -14,6 +19,9 @@ export default {
   <div class="post">
     <strong>Название: </strong>{{post.name}}
     <strong>Описание: </strong>{{post.body}}
+    <my-button>hello</my-button>
+    <br>
+    <my-input v-model="inputValue"/>
   </div>
 </template>
 

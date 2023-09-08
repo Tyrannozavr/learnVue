@@ -1,11 +1,17 @@
 <script>
 export default {
-  name: "my-input"
+  name: "my-input",
+  props: {
+    modelValue: {
+      type: [String, Number],
+      required: true
+    }
+  }
 }
 </script>
 
 <template>
-  This will be a custom input
+  <input type="text" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" >
 </template>
 
 <style scoped>
