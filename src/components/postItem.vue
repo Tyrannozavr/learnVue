@@ -9,7 +9,6 @@ export default {
   },
   data () {
     return {
-      inputValue: ''
     }
   }
 }
@@ -21,7 +20,6 @@ export default {
     <strong>Описание: </strong>{{post.body}}
     <my-button>hello</my-button>
     <br>
-    <my-input v-model="inputValue"/>
   </div>
 </template>
 
