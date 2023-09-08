@@ -1,7 +1,9 @@
 <template>
   <div>
+    <strong>Создание поста</strong>
     <post-form @create="createPost"/>
     <posts-list :posts="posts"/>
+
   </div>
 </template>
 
@@ -33,5 +35,6 @@ export default {
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 </style>

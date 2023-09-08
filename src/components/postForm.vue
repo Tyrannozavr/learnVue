@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <form class="app" @submit.prevent="createPost">
+  <form @submit.prevent="createPost">
     <my-input v-model="post.name" placeholder="название" />
     <my-input v-model="post.body" placeholder="описание" />
 
@@ -36,18 +36,10 @@ export default {
 </template>
 
 <style scoped>
-.app {
-  padding: 20px;
-}
 form {
   display: flex;
   flex-direction: column;
-}
-.input {
-  width: 100%;
-  border: 1px solid teal;
-  padding: 10px 15px;
-  margin-top: 15px;
+  padding: 20px
 }
 .submit {
   border: 2px solid teal;
