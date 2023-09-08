@@ -18,7 +18,10 @@ export default {
   <div class="post">
     <strong>Название: </strong>{{post.name}}
     <strong>Описание: </strong>{{post.body}}
-    <my-button>hello</my-button>
+    <div class="post_btns">
+      <my-button @click="$emit('remove', post)">Удалить</my-button>
+    </div>
+
     <br>
   </div>
 </template>
@@ -28,7 +31,9 @@ export default {
   margin: 10px;
   border: 1px solid teal;
   padding: 15px;
-
+}
+.post_btns {
+  display: flex;
 }
 
 </style>
