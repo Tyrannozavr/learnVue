@@ -1,9 +1,6 @@
 <template>
- <div>
-    <strong>Создание поста</strong>
-    <post-form @create="createPost"/>
+    <my-dialog v-model:show="showDialog" ><post-form @create="createPost"/></my-dialog>
     <posts-list :posts="posts" @remove="removePost"/>
-  </div>
 </template>
 
 <script>
@@ -20,7 +17,8 @@ export default {
         {id: 1, name: 'JS', body: 'is universal language'},
         {id: 2, name: 'Python', body: 'is very simple language'},
         {id: 3, name: 'C#', body: 'is very fast language'},
-      ]
+      ],
+      showDialog: true
     }
   },
   methods: {

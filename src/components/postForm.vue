@@ -27,6 +27,7 @@ export default {
 </script>
 
 <template>
+  <strong>Создание поста</strong>
   <form @submit.prevent="createPost">
     <my-input v-model="post.name" placeholder="название" />
     <my-input v-model="post.body" placeholder="описание" />
