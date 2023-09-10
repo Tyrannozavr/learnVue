@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div class="dialog" v-if="show" @click="$emit('update:show', false)">
-    <div class="dialog__content">
+    <div class="dialog__content" @click.stop>
       <slot />
     </div>
   </div>
@@ -34,5 +34,6 @@ export default {
   border-radius: 12px;
   min-width: 300px;
   min-height: 50px;
+  padding: 20px 15px;
 }
 </style>

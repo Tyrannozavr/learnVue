@@ -16,7 +16,8 @@ export default {
 
 <template>
   <div class="post">
-    <strong>Название: </strong>{{post.name}}
+    <strong>Название: </strong>{{post.title}}
+    <br>
     <strong>Описание: </strong>{{post.body}}
     <div class="post_btns">
       <my-button @click="$emit('remove', post)">Удалить</my-button>
