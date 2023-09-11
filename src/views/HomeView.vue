@@ -1,5 +1,17 @@
 <template>
-  <my-button @click="showDialog = true">Создать пользователя</my-button>
+  <h1>Страница с постами</h1>
+  <div class="app_btns">
+    <my-button
+        @click="showDialog = true"
+    >
+      Создать пользователя
+    </my-button>
+    <my-select
+        v-model="selectedSort"
+    />
+    {{selectedSort}}
+  </div>
+
     <my-dialog v-model:show="showDialog" ><post-form @create="createPost"/></my-dialog>
     <posts-list v-if="!isLoadingPosts" :posts="posts" @remove="removePost"/>
     <div v-else>Идет загрузка...</div>
@@ -17,7 +29,8 @@ export default {
     return {
       posts: [],
       showDialog: false,
-      isLoadingPosts: true
+      isLoadingPosts: true,
+      selectedSort: '',
     }
   },
   methods: {
@@ -39,7 +52,6 @@ export default {
       } catch (e) {
         alert(e)
       }
-      // this.posts = response.data
     }
   },
   created() {
@@ -47,3 +59,10 @@ export default {
   }
 }
 </script>
+<style>
+.app_btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+</style>
