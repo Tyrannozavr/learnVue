@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-  <select  v-model="modelValue" @change="changeOption">
+  <select @change="changeOption">
     <option value="">Выберите из списка:</option>
     <option
       v-for="option in options"
@@ -34,6 +34,7 @@ export default {
       >
       {{option.name}}
     </option>
+  </select>
 </template>
 
 <style scoped>
