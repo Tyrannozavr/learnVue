@@ -25,24 +25,15 @@ export default {
 </script>
 
 <template>
-<!--  <select  @change="changeOption">-->
-<!--    <option disabled value="">Выберите из списка:</option>-->
-<!--    <option-->
-<!--      v-for="option in options"-->
-<!--      :key="option.value"-->
-<!--      :value="option.value"-->
-<!--      >-->
-<!--      {{option.name}}-->
-<!--    </option>-->
-<!--  </select>-->
-  <div id="app">
-    <select v-model="modelValue" @change=changeOption>
-        <option value="tom">Tom</option>
-        <option value="bob">Bob</option>
-        <option value="sam">Sam</option>
-    </select>
-    <span>Выбрано: {{modelValue}} modelvalue</span>
-</div>
+  <select  v-model="modelValue" @change="changeOption">
+    <option value="">Выберите из списка:</option>
+    <option
+      v-for="option in options"
+      :key="option.value"
+      :value="option.value"
+      >
+      {{option.name}}
+    </option>
 </template>
 
 <style scoped>

@@ -8,8 +8,8 @@
     </my-button>
     <my-select
         v-model="selectedSort"
+        :options="options"
     />
-    {{selectedSort}}
   </div>
 
     <my-dialog v-model:show="showDialog" ><post-form @create="createPost"/></my-dialog>
@@ -30,7 +30,13 @@ export default {
       posts: [],
       showDialog: false,
       isLoadingPosts: true,
-      selectedSort: '',
+      selectedSort: "",
+      options: [
+        {name: "first", value: "first"},
+        {name: "second", value: "second"},
+        {name: "third", value: "third"},
+        {name: "four", value: "four"},
+      ],
     }
   },
   methods: {
