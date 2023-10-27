@@ -1,4 +1,5 @@
 <template>
+  <router-link to="example">example</router-link>
   <h1>Страница с постами</h1>
   <div class="app_btns">
     <my-button
